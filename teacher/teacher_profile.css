@@ -1,0 +1,78 @@
+.profile {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile img {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-box {
+    width: 600px;
+    margin-top: 20px;
+    background: #e91e63;
+    position: absolute;
+    padding: 15px;
+    border-radius: 10%;
+    box-shadow: 0 5px 15px -5px #00000070
+}
+
+@media only screen and (max-width: 600px) {
+    .profile-box {
+        font-size: 15px;
+    }
+}
+
+.profile-box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: -10%;
+    left: 35%;
+    box-shadow: 0 5px 15px -5px #00000070
+}
+
+.profile-details {
+    color: white;
+    margin-top: 30%;
+    margin-left: 10%;
+}
+
+.profile-details h1 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.profile-details p {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.profile-details .edit-button {
+    margin: 20px;
+    margin-left: 25%;
+    height: 70px;
+    width: 200px;
+    text-align: center;
+    background: #00316b;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.profile-details .edit-button a{
+    text-decoration: none;
+    color: white;
+}
