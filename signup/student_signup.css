@@ -1,12 +1,15 @@
+@import url(https://fonts.googleapis.com/css2?family=Merienda+One&display=swap);
+
 *{
   padding: 0;
   margin: 0;
+  font-family: 'Merienda One', cursive;
 }
 
 .login-page{
   position: absolute;
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   background: #3475ca;
   display: flex;
   justify-content: center;
@@ -116,13 +119,14 @@
 
 
 .student-signup-form{
-  margin-top: 2px;
-  background: #e91e63;
-  padding: 20px;
+  background: rgba(204, 252, 30,0.5);
   padding-top: 3%;
   position: absolute;
   text-align: center;
   color: white;
+  width: 40%;
+  left: 0;
+  height: 94vh;
 }
 
 .student-signup-form h1,h3{
@@ -178,4 +182,8 @@
   color: #00316b;
   transform: scale(1.2);
   transition: 0.5s;
+}
+
+#info{
+  font-size: 15px;
 }
