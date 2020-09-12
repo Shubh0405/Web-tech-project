@@ -1,0 +1,181 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.login-page{
+  position: absolute;
+  width: 100%;
+  height: 120vh;
+  background: #3475ca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page h1{
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.login-page img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.login-form h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.avatar img{
+  height:100px;
+  width:100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: 37%;
+  opacity: 1;
+  overflow: auto;
+  opacity: 1;
+}
+
+.student-signup-form p{
+  margin-top: 30px;
+  padding:0;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+  display: block;
+}
+
+/* .student-signup-form input{
+  width: 100%;
+  margin-bottom: 20px;
+  color: white;
+  opacity: 1;
+} */
+
+.student-signup-form input
+{
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+
+}
+
+.student-signup-form input:hover{
+  border-bottom: 1px solid #00316b;
+}
+
+/* .login-form input[type="submit"]{
+  border: 1px solid #00316b;
+  outline: none;
+  height: 40px;
+  background: #00316b;
+  color: white;
+  font-size: 18px;
+
+}
+
+.login-form input[type="submit"]:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.5;
+} */
+
+/* .login-form a{
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 20px;
+  color: white;
+  opacity: 1;
+}
+
+.login-form a:hover{
+  color: #00316b;
+  transform: scale(1.2);
+  transition: 0.5s;
+} */
+
+
+.student-signup-form{
+  margin-top: 2px;
+  background: #e91e63;
+  padding: 20px;
+  padding-top: 3%;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+.student-signup-form h1,h3{
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 300;
+  opacity: 1;
+}
+
+.student-signup-form label{
+  margin: 5px;
+  margin-right: 10px;
+  padding:0;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+/* .student-signup-form input[type="text"]{
+  color: white;
+} */
+
+
+.student-signup-form input[type="submit"]{
+  border: 1px solid #00316b;
+  outline: none;
+  height: 40px;
+  background: #00316b;
+  color: white;
+  font-size: 18px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.student-signup-form input[type="submit"]:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 0.5;
+}
+
+.student-signup-form a{
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 20px;
+  color: white;
+  opacity: 1;
+}
+
+.student-signup-form a:hover{
+  color: #00316b;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
