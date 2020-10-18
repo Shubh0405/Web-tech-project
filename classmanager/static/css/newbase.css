@@ -91,10 +91,10 @@
   height: 400px;
   background: #000;
 }
-.student-list .student-box:hover{
+/* .student-list .student-box:hover{
   transform: scale(1.2);
   transition: 0.5s;
-}
+} */
 
 .student-list .student-box .imgBx{
   position: relative;

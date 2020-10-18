@@ -4,12 +4,14 @@
 
 <div class="student-list">
 <div class="container">
-  {% if class_students_list.count == 0 %}
+  {% if students_list == 0 %}
     <h1>No students in the class.</h1>
-    {% else %}
+    <br>
+    <a class="btn btn-primary" href="{% url 'classroom:students_list' %}">Add Students</a>
+    {%else %}
 
   <form method='GET' action="{% url 'classroom:class_student_list' %}">
-    <p>Search Student: <input type='search' name='q' placeholder='Search'></p>
+    <p>Search Student: <input type='search' name='q' placeholder='Search'> <a class="btn btn-primary" href="{% url 'classroom:students_list' %}" style="float:right">Add Students</a></p>
   </form>
   <div class="row">
   {% for student in class_students_list %}
@@ -42,38 +44,4 @@
 {% endif %}
 </div>
 
-
-<!--
-<div class="jumbotron">
-  {% if teacher.class_students.count == 0 %}
-    <h1>No students in the class.</h1>
-    {% else %}
-    <h1>Your class students list.</h1>
-    <br>
-    <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Roll No.</th>
-          <th scope="col">Name</th>
-          <th scope="col">Email Id</th>
-          <th scope="col"> </th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for student in teacher.class_students.all %}
-        <tr>
-          <th>{{ student.roll_no }}</th>
-          <th>{{ student.name }}</th>
-          <th>{{ student.email }}</th>
-          <th> <a class="btn btn-primary" href="{% url 'classroom:student_marks_list' pk=student.pk %}">View Marks Profile</a> </th>
-        </tr>
-
-        {% endfor %}
-      </tbody>
-    </table>
-    <p><a class="btn btn-danger" href="{% url 'classroom:write_notice' %}">Add Notice</a></p>
-  {% endif %}
-
-</div>
--->
 {% endblock %}

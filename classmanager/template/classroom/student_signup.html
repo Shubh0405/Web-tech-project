@@ -1,15 +1,17 @@
 {% extends 'classroom/base.html' %}
 {% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/student_signup.css' %}">
+{% endblock %}
 {% block content %}
 
 <div class="login-page">
-    <img src="{% static 'images/login-background.PNG' %}" alt="">
+    <img src="{% static 'images/student-register.PNG' %}" alt="">
     <div class="student-signup-form">
       {% if registered %}
       <h1>Thank you for registering.</h1>
       {% else %}
-      <h1>Sign up as a Student.</h1>
-      <h3>Fill out the form:</h3>
+      <h1><b>Sign up as a Student</b></h1>
 
       <form method="post">
         {% csrf_token %}
@@ -24,16 +26,35 @@
         {{ user_form.non_field_errors }}
 
         <p> <label for="">{{ user_form.username.label_tag }}</label>{{ user_form.username }}</p>
-        <p> {{ user_form.username.help_text }}</p>
         <p> <label for="">{{ user_form.password1.label_tag }}</label>{{ user_form.password1 }}</p>
-        <p>Password can't be similar to your other fields and must contain atleast 8 characters.</p>
         <p> <label for="">{{ user_form.password2.label_tag }}</label>{{ user_form.password2 }}</p>
-        <p> {{ user_form.password2.help_text }} </p>
         <input type="submit" name="" value="Sign Up">
       </form>
       <a href="{% url 'classroom:login' %}">Already have an account.</a>
       {% endif %}
     </div>
 </div>
+
+<!-- <div class="login-page">
+  <img src="student-register.PNG" alt="">
+  <div class="student-signup-form">
+    <h1><b>Sign up as a Student.</b></h1>
+
+    <form method="post">
+      <p> <label>Name:</label><input type="text" name="" required></p>
+      <p> <label >Roll. No.:</label><input type="text" name="" required></p>
+      <p> <label for="">Phone No.:</label><input type="number" name=""  required></p>
+      <p> <label for="">Email ID:</label><input type="email" name="" required></p>
+
+      <p> <label for="">Username:</label><input type="text" name="" ></p>
+      <p> <label for="">Password:</label><input type="password" name="" value=""></p>
+      <p> <label for="">Confirm Password:</label><input type="password" name="" value=""></p>
+      <input type="submit" name="" value="Sign Up">
+    </form>
+
+    <a href="">Already have an account.</a>
+
+  </div>
+</div> -->
 
 {% endblock %}

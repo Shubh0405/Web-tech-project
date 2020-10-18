@@ -159,6 +159,7 @@ def class_students_list(request):
     query = request.GET.get("q", None)
     students = StudentsInClass.objects.filter(teacher=request.user.Teacher)
     students_list = [x.student for x in students]
+    length = len(students_list)
     qs = Student.objects.all()
     if query is not None:
         qs = qs.filter(
@@ -172,6 +173,7 @@ def class_students_list(request):
             pass
     context = {
         "class_students_list": qs_one,
+        "students_list": length
     }
     template = "classroom/class_students_list.html"
     return render(request, template, context)

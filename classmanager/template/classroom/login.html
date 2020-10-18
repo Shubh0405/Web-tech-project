@@ -20,8 +20,7 @@
 <div class="login-bg">
   <div class="wrapper">
     <div class="title">Login Form</div>
-    <form action="{% url 'classroom:login' %}">
-      {% csrf_token %}
+    <form action="{% url 'classroom:login' %}" method="post">
       <div class="field">
         <input type="text" name="username" required>
         <label>Username</label>
@@ -34,7 +33,8 @@
         <input type="submit" value="Login">
       </div>
       <div class="signup-link">
-        Not a member? <a href="{% url 'classroom:signup' %}">Signup now</a></div>
+        Not a member? <a href="{% url 'classroom:signup' %}">Signup now</a>
+      </div>
       </form>
     </div>
   </div>

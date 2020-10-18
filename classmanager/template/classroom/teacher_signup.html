@@ -1,5 +1,8 @@
 {% extends 'classroom/base.html' %}
 {% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/student_signup.css' %}">
+{% endblock %}
 {% block content %}
 
 
@@ -10,7 +13,7 @@
     <h1>Thank you for registering.</h1>
     {% else %}
     <h1>Sign Up as a teacher.</h1>
-    
+
 
     <form method="post">
       {% csrf_token %}
@@ -26,18 +29,14 @@
       {{ user_form.non_field_errors }}
 
       <p> <label for="">{{ user_form.username.label_tag }}</label>{{ user_form.username }}</p>
-      <p> {{ user_form.username.help_text }}</p>
       <p> <label for="">{{ user_form.password1.label_tag }}</label>{{ user_form.password1 }}</p>
-      <p> {{ user_form.password1.help_text }} </p>
       <p> <label for="">{{ user_form.password2.label_tag }}</label>{{ user_form.password2 }}</p>
-      <p> {{ user_form.password2.help_text }} </p>
       <input type="submit" name="" value="Sign Up">
     </form>
     <a href="{% url 'classroom:login' %}">Already have an account.</a>
     {% endif %}
   </div>
 </div>
-
 
 
 {% endblock %}
