@@ -612,11 +612,11 @@ box-shadow: 0 0 5px #000
   border-bottom: 1px solid #00316b;
 }
 
-.login-form input[type="text"]:hover, input[type="password"]:hover{
+/* .login-form input[type="text"]:hover, input[type="password"]:hover{
   transform: scale(1.1);
   transition: 0.5;
   border-bottom: 1px solid #00316b;
-}
+} */
 
 .login-form input[type="submit"]{
   border: 1px solid #00316b;
@@ -630,8 +630,8 @@ box-shadow: 0 0 5px #000
 
 .login-form input[type="submit"]:hover{
   cursor: pointer;
-  transform: scale(1.2);
-  transition: 0.5;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 .login-form a{

@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/searchbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/newbase.css' %}">
+    {% block css %}
+    {% endblock %}
 
     {% load bootstrap4 %}
     {% bootstrap_css %}
@@ -72,7 +74,7 @@
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <label class="logo" data-aos="fade-left" data-aos-delay="100" data-aos-duration="2500">School Web</label>
+      <label class="logo" >School Web</label>
       <ul>
         {% if user.is_authenticated %}
         {% if user.is_teacher%}
