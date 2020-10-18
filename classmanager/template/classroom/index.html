@@ -13,87 +13,105 @@
 </div>
 {% endif %}
 
-    <div class="banner">
-      <img src="{% static 'images/first.PNG' %}" alt="">
-      <div class="content">
-        <h1>Class Manager</h1>
-        <p>A Student-Teacher Portal</p>
-      </div>
-    </div>
+<div class="banner" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="2500">
+  <img class="banner_background" src="{% static 'images/landing.PNG' %}" alt="">
+  <div class="content">
+    <h1>School Web</h1>
+    <p>Classroom activities turns online.</p>
+  </div>
+</div>
 
-    <div class="about">
-      <h1>About Us</h1>
-      <p>Class Manager is a student-teacher portal with various classroom features like uploading assignments, submissions, Class Notice and many more. Students and Teacher can login in the portal and can experience interactive classroom experience online.
-      One of the most powerful features of class manager is its student managing abilities. Teacher can easily manage their students and keep them updated about all of the activities in class.</p>
-    </div>
-
-    <div class="use-content">
-      <h1>Our Services</h1>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="box">
-            <div class="imgBx">
-              <img src="{% static 'images/teacher.PNG' %}" alt="">
-            </div>
-            <div class="content">
-              <h3>For Teacher</h3>
-              <ol>
-                <li>Teachers can add student in their class through Add Student option.</li>
-                <li>After adding students in their class, Teacher can give or edit their class students marks.</li>
-                <li>Teachers can also write notice which will be send to all students in their class.</li>
-                <li>Teachers can upload assignments through upload assignment options.</li>
-                <li>Teacher can check their student's assignment submission and give them marks accordingly.</li>
-                <li>Students can message Teachers directly and their messages can be seen in Inbox.</li>
-                <li>Teacher can also all the marks given by them to a student by accessing their Marks profile and can edit their marks.</li>
-                <li>User can add profile pic through edit profile option.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="box">
-            <div class="imgBx">
-              <img src="{% static 'images/homeimg.PNG' %}" alt="">
-            </div>
-            <div class="content">
-              <h3>For Student</h3>
-              <ol>
-                <li>Students can login in the portal and keep themselves updated of all the activities going on in the class.</li>
-                <li>Students can see the notice given by their teacher in the Class Notice option.</li>
-                <li>Students can download their assignments in the Assignments option and can also submit it their. ( Once assignment is submitted, it can't be changed later. )</li>
-                <li> Students can contact any teacher through message option in All Teachers List. </li>
-                <li>Students can check their marks in the Marks option.</li>
-                <li>User can add profile pic through edit profile option.</li>
-              </ol>
-          </div>
+<div class="cards_section">
+  <div class="row">
+    <div class="col-md-12 col-lg-4">
+      <div class="view view-first" data-aos="fade-left" data-aos-delay="50" data-aos-duration="2500">
+        <img src="{% static 'images/card-1.PNG' %}" />
+        <div class="mask">
+          <h2>Classrooms</h2>
+          <p>Create your own classroom and add students and enjoy all the features of classweb. All the classroom activites turned online with classweb makes classroom interaction more simple and interesting.</p>
         </div>
       </div>
     </div>
-    </div>
-
-    <div class="research">
-      <div class="row">
-        <div class="col-md-4">
-          <img src="{% static 'images/mastery-based-education.PNG' %}" alt="">
-        </div>
-        <div class="col-md-8">
-          <div class="digital-content">
-            <h2>Digital Learning</h2>
-            <br>
-            <p>We surveyed over 16,000 teachers and administrators to better understand the state of digital learning. Class Manager provides all facilities that is needed for improvising digital learning.</p>
-          </div>
+    <div class="col-md-12 col-lg-4">
+      <div class="view view-first" data-aos="fade-up" data-aos-delay="100" data-aos-duration="2500">
+        <img src="{% static 'images/card-2.PNG' %}" />
+        <div class="mask">
+          <h2>Digital Learning</h2>
+          <p>Online education is a flexible instructional delivery system that encompasses any kind of learning that takes place via the Internet. Class Web gives educators an opportunity to reach students who may not be able to enroll in a traditional classroom course and supports students who need to work on their own schedule and at their own pace.</p>
         </div>
       </div>
     </div>
-
-    <div class="social">
-      <h1>Are you ready to advance what's possible in education.</h1>
-      <h3>Then connect with us on social media.</h3>
-      <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
-      <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
-      <a class="social-icon" href="#"><i class="fab fa-instagram"></i></a>
-      <a class="social-icon" href="#"><i class="fab fa-google"></i></a>
-      <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+    <div class="col-md-12 col-lg-4">
+      <div class="view view-first" data-aos="fade-right" data-aos-delay="150" data-aos-duration="2500">
+        <img src="{% static 'images/card-3.PNG' %}" />
+        <div class="mask">
+          <h2>Community</h2>
+          <p>Learning is not just about teachers and students. Class Web allows you to bring everyone together—students, teachers, coaches, parents, administrators—with one communication and collaboration platform.</p>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<div class="parallax pic">
+  <div class="heading">
+    Are you ready to advance what's possible in education?
+  </div>
+</div>
+
+<div class="explain">
+  <h2>How To Use</h2>
+  <div class="explain_blog left_blog" data-aos="fade-left" data-aos-delay="50" data-aos-duration="2500">
+    <div class="blog_img_left">
+      <img src="{% static 'images/login.svg' %}" alt="">
+    </div>
+    <div class="blog_info">
+      <h1>Login and Sign Up</h1>
+      <p>If you are a teacher or you want to create your own classroom, then Sign up as a teacher. If you are a student and want to get added in a classroom, then Sign Up as student and enjoy our facilities.</p>
+    </div>
+  </div>
+  <div class="explain_blog right_blog" data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500">
+    <div class="blog_info right_info">
+      <h1>Create your Classroom.</h1>
+      <p>As a teacher create your own classroom and add your students. Upload assignments, course materails, class notice in your classroom and award marks to your students based on their performance.</p>
+    </div>
+    <div class="blog_img_right">
+      <img src="{% static 'images/classroom.svg' %}" alt="">
+    </div>
+  </div>
+  <div class="explain_blog left_blog" data-aos="fade-left" data-aos-delay="50" data-aos-duration="2500">
+    <div class="blog_img_left">
+      <img src="{% static 'images/assignment.svg' %}" alt="">
+    </div>
+    <div class="blog_info">
+      <h1>Upload Assignments</h1>
+      <p>Upload your assignments and give due date to students for their submissions. Collect their submissions online and award them marks according to their work.</p>
+    </div>
+  </div>
+  <div class="explain_blog right_blog" data-aos="fade-right" data-aos-delay="50" data-aos-duration="2500">
+    <div class="blog_info right_info">
+      <h1>Course Materials</h1>
+      <p>Upload your course materials to make learning easy for your students. Your uploaded course materials will be accessible to students in your classroom. Students can download the materials and study easily.</p>
+    </div>
+    <div class="blog_img_right">
+      <img src="{% static 'images/coursematerial.svg' %}" alt="">
+    </div>
+  </div>
+  <div class="explain_blog left_blog" data-aos="fade-left" data-aos-delay="50" data-aos-duration="2500">
+    <div class="blog_img_left">
+      <img src="{% static 'images/marks.svg' %}" alt="">
+    </div>
+    <div class="blog_info">
+      <h1>Marks Evaluation</h1>
+      <p>Award marks to your students based on their academic performance. Marks will be displayed to student login automatically and can be edited later.</p>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    AOS.init();
+  </script>
+
 
 {% endblock %}

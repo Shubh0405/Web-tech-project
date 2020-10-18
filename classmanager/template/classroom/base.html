@@ -4,25 +4,28 @@
   <head>
     <meta charset="utf-8">
     <title>Student manger</title>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <!-- JS, Popper.js, and jQuery -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/searchbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/newbase.css' %}">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
     {% load bootstrap4 %}
     {% bootstrap_css %}
@@ -30,7 +33,7 @@
   </head>
   <body>
 
-    <nav>
+    <!-- <nav>
       <div class="toggle">
         <a href="{% url 'home' %}">Class Manager</a>
         <i class="fa fa-bars menu"></i>
@@ -62,20 +65,53 @@
           <li><a class="head-left" href="{% url 'classroom:signup' %}">Sign Up</a></li>
         {% endif %}
       </ul>
-    </div>
+    </div> -->
+
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo" data-aos="fade-left" data-aos-delay="100" data-aos-duration="2500">School Web</label>
+      <ul>
+        {% if user.is_authenticated %}
+        {% if user.is_teacher%}
+          <li> <a href="{% url 'classroom:upload_assignment' %}"><p>Upload Assignment</p></a> </li>
+          <li> <a href="{% url 'classroom:assignment_list' %}"><p>Assignment list</p></a> </li>
+          <li> <a href="{% url 'classroom:submit_list' %}"><p>View Submissions</p></a> </li>
+          <li> <a href="{% url 'classroom:students_list' %}"><p>All Students List</p></a> </li>
+          <li> <a href="{% url 'classroom:class_student_list'%}"><p>Class Students List</p></a> </li>
+          <li> <a href="{% url 'classroom:write_notice' %}"><p>Write Notice</p></a> </li>
+          <li> <a href="{% url 'classroom:messages_list' pk=user.pk %}"><p>Inbox</p></a> </li>
+          <li> <a href="{% url 'classroom:teacher_detail' pk=user.pk %}"><p>Profile</p></a> </li>
+          {% else %}
+          <li> <a href="{% url 'classroom:all_marks_list' pk=user.pk %}"><p>Marks</p></a> </li>
+          <li> <a href="{% url 'classroom:class_notice' pk=user.pk %}"><p>Class Notice</p></a> </li>
+          <li> <a href="{% url 'classroom:class_assignment' %}"><p>Class Assignment</p></a> </li>
+          <li> <a href="{% url 'classroom:teachers_list' %}"><p>Teacher list</p></a> </li>
+          <li> <a href="{% url 'classroom:student_detail' pk=user.pk %}"><p>Profile</p></a> </li>
+          {% endif %}
+          <li> <a href="{% url 'classroom:change_password' %}"><p>Change Password</p></a> </li>
+          <li> <a href="{% url 'classroom:logout' %}"><p>Logout</p></a> </li>
+          {% else %}
+          <li><a class="head-left" href="{% url 'classroom:login' %}"><p>Login</p></a></li>
+          <li><a class="head-left" href="{% url 'classroom:signup' %}"><p>Sign Up</p></a></li>
+        {% endif %}
+      </ul>
+    </nav>
 
       {% block content %}
       {% endblock %}
 
 
-      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
           $('.menu').click(function(){
             $('ul').toggleClass('active');
           })
         })
-      </script>
+      </script> -->
 
   </body>
 </html>
